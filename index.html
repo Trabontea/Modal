@@ -1,0 +1,110 @@
+<!DOCTYPE> 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <title>Modal</title>
+  </head>
+  <body>
+    <div class="modal-overlay"  id="modal-overlay"></div>
+    <div class="modal"  id="modal">
+      <button class="close-button" id="close-button"> X </button>
+      <div class="modal-content">
+        <h1>Add Product</h1>
+        <h3> Second-hand Car</h3>
+        <h4>Automobiles</h4>
+        
+          <form action="#" id="carform" name='carform'>
+            <section>
+              <label for="title" >Title of announcement</label>
+              <input name="title" type="text" id="title" placeholder="Title">
+              <div id="brands">
+                <label for="brand">Brand</label>
+                <select name="brand" id="brand" placeholder="Choose Your Brand"
+                onchange="showHideLogo(this)">
+                  <option value="">Choose Brand</option>
+                  <option value="01">Audi</option>
+                  <option value="02">Opel</option>
+                  <option value="03">Mercedes</option>
+                  <option value="04">Saab</option>
+                  <option value="05">Volvo</option>
+                </select>
+                  <div id="div01">
+                    <img  class="audi" src="pictures/audi.png">
+                  </div>
+                  <div id="div02">
+                    <img  class="opel" src="pictures/opel.png">
+                  </div>
+                    <div id="div03">
+                    <img  class="mercedes" src="pictures/mercedes.png">
+                  </div>
+                  <div id="div04">
+                    <img  class="saab" src="pictures/saab.png">
+                  </div>
+                  <div id="div05">
+                    <img  class="volvo" src="pictures/volvo.png">
+                  </div>
+              
+              </div> <!-- End id Brands -->  
+              <label for="year">Manufactoring Year</label>
+              <input name="year" type="text" id="year" maxlength="4" placeholder="Manufactoring Year">
+              <label for="mileage">Mileage</label>
+              <input name="mileage" type="text" id="mileage" placeholder="Mileage">
+              <label for="fuel">Fuel Type</label>
+              <select name="fuel"  id="fuel">
+                <option value="">Choose Fuel Type</option>
+                <option value="gas">Gas</option>
+                <option value="diesel">Diesel</option>
+              </select>
+              <div id="colors">  
+                <label for="color">Color</label>
+                <select name="culori"  id="color" onchange="showHideColor(this)">
+                  <option value="">Choose Color</option>
+                  <option value="1">Red</option>
+                  <option value="2">Grey</option>
+                  <option value="3">Black</option>
+                  <option value="4">White</option>
+                </select>
+                  <div class="red" id="div1"></div>
+                  <div class="grey" id="div2"></div>
+                  <div class="black" id="div3"></div>
+                  <div class="white" id="div4"></div>
+              <div>    
+            </section>
+            <section>
+              <label for="damage">Vehicle Damage</label>
+              <select name="damage"  id="damage">
+                <option value="">Is damage the car?</option>
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+              </select>
+              <div id="crushDetails">
+                <label for="crush">Crush details</label>
+                <input name="crush" type="text" id="crush" placeholder="Crush details">
+              </div>
+              <label for="price">Price</label>
+              <input name="price" type="text" id="price" placeholder="Enter price">
+              <label for="currency">Currency</label>
+              <select name="currency" id="currency">
+                <option value="">Chooce Currency</option>
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+              </select>
+              <label for="description">Description</label>
+              <textarea name="descriptions"  id="description"></textarea>
+              <div class="btn-group">
+                <button name="save" id="save" class="btn" type="submit"><span>Save</span></button>
+                <button name="cancel" id="cancel" class="btn"><span>Cancel</span></button>
+              </div>
+            </section>
+          </form>
+
+          <div id="errorMessages"></div>
+      </div>
+    </div> <!-- End Modal -->  
+
+    <button id="open-modal" class="open-button">Open Modal</button>
+
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>
